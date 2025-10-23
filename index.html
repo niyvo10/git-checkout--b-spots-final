@@ -31,6 +31,8 @@
             src="./images/avatar.jpg"
             alt="Profile photo of Bessie Coleman"
             class="profile__avatar"
+            data-open="avatar-modal"
+            style="cursor: pointer"
           />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
@@ -104,7 +106,39 @@
           </form>
         </div>
       </div>
+      <div class="modal" id="avatar-modal">
+        <div class="modal__content">
+          <button class="modal__close-btn" type="button">
+            <img src="./images/closeicon.svg" alt="Close button" />
+          </button>
+          <h2 class="modal__title">Edit avatar</h2>
+          <form class="modal__form" id="edit-avatar-form" name="avatar-form">
+            <label class="modal__label" for="avatar-link">Image link</label>
+            <input
+              type="url"
+              id="avatar-link"
+              name="avatar"
+              class="modal__input"
+              placeholder="Avatar image link"
+              required
+            />
+            <span class="modal__error" id="avatar-link-error"></span>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
 
+      <div class="modal" id="confirm-modal">
+        <div class="modal__content">
+          <button class="modal__close-btn" type="button">
+            <img src="./images/closeicon.svg" alt="Close button" />
+          </button>
+          <h2 class="modal__title">Are you sure?</h2>
+          <form class="modal__form modal__form--confirm" id="confirm-form">
+            <button type="submit" class="modal__submit-btn">Yes</button>
+          </form>
+        </div>
+      </div>
       <div class="modal modal--type-preview" id="preview-modal">
         <div class="modal__preview-content">
           <button
