@@ -1,4 +1,4 @@
-# Spots - Final Project
+# Spots - Final Project Project/ 9 final version ready for review
 
 This repository is the Spots project updated to integrate with TripleTen backend API.
 
