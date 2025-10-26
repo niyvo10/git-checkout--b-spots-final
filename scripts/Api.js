@@ -69,4 +69,4 @@ class Api {
   }
 }
 
-window.Api = Api;
+export default Api;
