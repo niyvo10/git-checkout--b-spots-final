@@ -1,39 +1,39 @@
-# Spots
+# Spots - Final Project Project/ 9 final version ready for review
 
-An image sharing site.
+This repository is the Spots project updated to integrate with TripleTen backend API.
 
-# Description
+## What I changed
 
-This is the third project of the Software Engineering program at TripleTen. It was created using HTML, CSS, and Responsive Design based on the design brief.
+- Added `scripts/Api.js` for server requests (GET/POST/PATCH/DELETE/PUT).
+- Replaced static initial cards with server-provided cards via `Promise.all`.
+- Added delete confirmation modal and implemented delete flow.
+- Implemented like/unlike behavior using API endpoints.
+- Added avatar edit modal and integration (`PATCH /users/me/avatar`).
+- Added simple UX indicators: "Saving..." and "Deleting...".
+- Added `scripts/constants.compat.js` to store the API token (replace with your token).
+- Added `package.json` and `webpack.config.js` templates for bundling (optional).
 
-## Tech Stack
+## How to run (simple static approach)
 
-- HTML
-- CSS
-- Responsive Design
+1. Put your personal token in `scripts/constants.compat.js` replacing `REPLACE_WITH_YOUR_TOKEN`.
+2. Open `index.html` in the browser (no build required).
 
-## Deployment
+## How to run with webpack (optional)
 
-This webpage is deployed to GitHub Pages
+1. Install dependencies: `npm install`
+2. Replace the token in `scripts/constants.compat.js`.
+3. Start dev server: `npm start`
+4. Build for production: `npm run build` (output to `dist/main.js`)
 
-Deployment Link:
+## Submission notes
 
-https://niyvo10.github.io/se_project_spots/
+- Create a branch `spots-final`, commit your changes, push to GitHub, and open a PR to `main`.
+- Include a project pitch video link in the PR description or `README.md`.
+- Make sure the token is set so the reviewer can test API interactions.
 
-Videos links for project:
+## Files to review
 
-https://drive.google.com/file/d/1j9MkhBH7KVd1d0CgC3xLkiJow0L0bd-7/view?usp=sharing
-
-https://drive.google.com/file/d/1L7LGAwAiASUjczkQZBJKIYlCPT0Qk508/view?usp=sharing
-
-https://drive.google.com/file/d/1aLjhBfNPhfKbsJ5-hiaQkJGE2c1uvkLl/view?usp=sharing
-
-https://drive.google.com/file/d/1H9KLuFG99VQKVl95GdY--qtDp2vg8koI/view?usp=sharing
-
-https://drive.google.com/file/d/1kSXvIAIfMXs5AFizgQMlZT9koRYIcSoK/view?usp=sharing
-
-https://drive.google.com/file/d/12QT2OVAb9fzoa-gtMDpbcxpQYOX6cFG-/view?usp=sharing
-
-https://drive.google.com/file/d/1h6O22ewhl-S8PwT3dNSTGr5LVdtdEv8n/view?usp=sharing
-
-https://drive.google.com/file/d/1xnJir8eliMx675vPNxBRfsQG6Tosh-Ej/view?usp=sharing
+- `scripts/Api.js`
+- `scripts/index.js` (backup: `scripts/index.js.bak`)
+- `scripts/constants.compat.js` (replace token)
+- `index.html` (contains modals and templates)
